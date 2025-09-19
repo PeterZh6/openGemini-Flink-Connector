@@ -94,8 +94,6 @@ public class OpenGeminiSink<T> extends RichSinkFunction<T> implements Checkpoint
     public static final String POINTS_PER_SECOND_METRIC = "pointsPerSecond";
     public static final String TOTAL_BYTES_WRITTEN_METRIC = "totalBytesWritten";
 
-    // TODO: decouple converter from configuration, the following method will be removed in the
-    // future
     /**
      * Creates a new OpenGeminiSink with the specified configuration.
      *
@@ -480,7 +478,7 @@ public class OpenGeminiSink<T> extends RichSinkFunction<T> implements Checkpoint
      * @param context the context for initializing the operator
      * @throws Exception
      */
-    // TODO: check the functionality of checkpointing
+    // TODO: check the usability of checkpointing
     @Override
     public void initializeState(FunctionInitializationContext context) throws Exception {
         ListStateDescriptor<List<String>> descriptor =
