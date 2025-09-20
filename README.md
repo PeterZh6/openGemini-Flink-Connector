@@ -1,4 +1,4 @@
-# Flink OpenGemini Connector (DRAFT)
+# Flink OpenGemini Connector
 
 _This connector is still being developed. Functions described may not be fully implemented yet, or
 subject to change. Please check the latest documentation and source code for updates._
@@ -372,14 +372,14 @@ During checkpoints, the sink will flush all buffered data to ensure no data loss
 
 The connector exposes the following Flink metrics under `opengemini.sink`:
 
-| Metric | Type | Description |
-|--------|------|-------------|
+| Metric | Type | Description                         |
+|--------|------|-------------------------------------|
 | `writeLatency` | Histogram | Batch write latency in milliseconds |
-| `currentBatchSize` | Gauge | Current number of points in buffer |
-| `writeErrors` | Counter | Total number of write failures |
-| `lastSuccessfulWriteTime` | Gauge | Timestamp of last successful write |
-| `pointsPerSecond` | Meter | Write throughput (60-second window) |
-| `totalBytesWritten` | Gauge | Total bytes written to OpenGemini |
+| `currentBatchSize` | Gauge | Current number of points in buffer  |
+| `writeErrors` | Counter | Total number of write failures      |
+| `lastSuccessfulWriteTime` | Gauge | Timestamp of last successful write  |
+| `pointsPerSecond` | Meter | Write throughput (not real time)    |
+| `totalBytesWritten` | Gauge | Total bytes written to OpenGemini   |
 
 Access metrics via:
 - Flink Web UI: Navigate to Task Metrics
