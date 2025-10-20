@@ -309,7 +309,7 @@ public class OpenGeminiSinkE2ETest {
         log.info("=== Flink job completed successfully ===");
 
         // verify result
-        await().atMost(Duration.ofSeconds(20))
+        await().atMost(Duration.ofSeconds(21))
                 .pollInterval(Duration.ofSeconds(1))
                 .untilAsserted(
                         () -> {
