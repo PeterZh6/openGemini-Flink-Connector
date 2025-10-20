@@ -41,6 +41,7 @@ import io.opengemini.client.api.Address;
 import io.opengemini.client.api.Point;
 
 import lombok.extern.slf4j.Slf4j;
+
 // random chars inserted  to change file for github actions
 /**
  * An Apache Flink sink connector for OpenGemini using the official OpenGemini client. This
