@@ -61,7 +61,7 @@ public class OpenGeminiSinkE2ETest {
             new GenericContainer<>(DockerImageName.parse(DOCKER_IMAGE))
                     .withExposedPorts(OPENGEMINI_PORT)
                     .waitingFor(Wait.forHttp("/ping").forPort(OPENGEMINI_PORT).forStatusCode(204))
-                    .withStartupTimeout(Duration.ofMinutes(1));
+                    .withStartupTimeout(Duration.ofMinutes(2));
 
     private static OpenGeminiClient client;
     private static String openGeminiUrl;
