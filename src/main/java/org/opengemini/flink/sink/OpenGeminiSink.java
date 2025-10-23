@@ -56,7 +56,7 @@ public class OpenGeminiSink<T> extends RichSinkFunction<T> implements Checkpoint
     private final OpenGeminiSinkConfiguration<T> configuration;
 
     // if the converter is OpenGeminiLineProtocolConverter, we can use direct conversion
-    // otherwise we need to convert Point to line protocol in invoke method
+    // otherwise we need to convert Point to line protocol in invoke method ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
     private boolean useDirectConversion = false;
     // either of lineProtocolConverter or openGeminiPointConverter must be set
     private OpenGeminiLineProtocolConverter<T> lineProtocolConverter;
